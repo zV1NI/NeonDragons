@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>NeonDragons</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/f6cb52faa1.js" crossorigin="anonymous"></script>
+  
+  <style>
+    
+    .init-hidden{
+      opacity: 0;
+      transition: opacity 2.5s linear;
+    }
+
+    .init-hidden-off{
+      opacity: 1;
+    }
+  
+  </style>
+  
+</head>
+
+<body>
+
+  <!--Nav-->
+  <header id="header">
+
+    <a id="logo" href="/index.html"><i class="fa-brands fa-d-and-d"><span> NeonDragons</span></i></a>
+
+  <nav id="navbar">
+
+    <button id="btn-mobile">
+      <span id="hamburguer"></span>
+    </button>
+    
+    <ul id="menu">
+      
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      
+    </ul>
+
+  </nav>
+
+    </header>
+
+  <main>
+
+    <!--hero section-->
+    <div class="hero">
+      <img src="images/trophy.jpg" alt="trophy">
+      <div class="hero_content">
+      <i class="fa-brands fa-d-and-d logo"></i>
+        <h1><br>NeonDragons</h1>
+        <h2>Home of the Champions</h2>
+      <p>bravery<br>creativity<br>resilience</p>
+    </div>
+    </div>
+    
+    <h1 class="socials_h1">Follow our socials:</h1>
+    
+    <!--hero socials-->
+    
+    <div class="hero_socials init-hidden">
+      
+      <ul class="socials">
+       
+        <li><a href="#"><i class="fa-brands fa-twitter twitter"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-youtube yt"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-discord disc"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitch twitch"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram insta"></i></a></li>
+      </ul>
+    </div>
+    
+  </main>
+
+   <!--Footer-->
+  <footer>
+
+    <div class="footer_info">
+
+      <div class="menu_footer">
+        <ul class="nav_footer_menu">
+          <h1><br>Navigation</h1>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+      
+      <div class="socials_footer">
+        <ul class="socials_footer_menu">
+          <h1><br>Socials</h1>
+          <li><a href="">Twitter</a></li>
+          <li><a href="">Youtube</a></li>
+          <li><a href="">Discord</a></li>
+          <li><a href="">Twitch</a></li>
+          <li><a href="">Instagram</a></li>
+        </ul>
+      </div>
+      
+      <div class="contact_footer">
+        <ul class="contact_footer_menu">
+          <h1><br>Contact Us</h1>
+          <li class=""><a href="">Email: abcdef123@gmail.com</a></li>
+          <li class=""><a href="">11-987654321</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <i class="fa-brands fa-d-and-d logo"></i>
+
+    <p>©NeonDragons All Rights Reserved</p>
+    
+  </footer>
+
+  
+  <script src="script.js"></script>
+
+  <script>
+
+    const observer = new IntersectionObserver(entries => {
+      console.log(entries)
+
+      Array.from(entries).forEach( entry => {
+        if (entry.intersectionRatio >= 1){
+           entry.target.classList.add('init-hidden-off')
+      }
+      } )
+      
+      
+    },{
+      threshold: [0, .5, 1]
+    }
+    )
+
+    Array.from(document.querySelectorAll('.init-hidden')).forEach(element =>{
+      observer.observe(element)
+    })
+    
+    
+  </script>
+  
+</body>
+
+</html>

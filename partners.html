@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Partners</title>
+  <link href="css/partners.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/f6cb52faa1.js" crossorigin="anonymous"></script>
+  <style>
+    
+    .init-hidden{
+      opacity: 0;
+      transition: opacity 1.7s linear;
+    }
+
+    .init-hidden-off{
+      opacity: 1;
+    }
+  
+  </style>
+</head>
+
+<body>
+
+  <!--Nav-->
+  <header id="header">
+
+    <a id="logo" href="/index.html"><i class="fa-brands fa-d-and-d"><span> NeonDragons</span></i></a>
+
+  <nav id="navbar">
+
+    <button id="btn-mobile">
+      <span id="hamburguer"></span>
+    </button>
+    
+    <ul id="menu">
+      
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      
+    </ul>
+
+  </nav>
+
+    </header>
+
+  <main>
+
+    <h1 class="titulo_pag">Partners</h1>
+    
+    <div class="partners">
+
+      <div class="feature init-hidden">
+        
+        <div class="content">
+          
+        <h1 class="title">ABC VPN</h1>
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mollis dolor. Duis porttitor quis dui non dignissim.</p>
+          
+       </div>
+        
+        <i class="fa-solid fa-wifi"></i>
+        
+      </div>
+
+       <div class="feature left init-hidden">
+        
+        <div class="content">
+          
+        <h1 class="title">123 CLOUD SERVICE</h1>
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mollis dolor. Duis porttitor quis dui non dignissim.</p>
+          
+       </div>
+        
+       <i class="fa-solid fa-cloud-arrow-down"></i>
+        
+      </div>
+
+       <div class="feature init-hidden">
+        
+        <div class="content">
+          
+        <h1 class="title">CRYPTO BANK</h1>
+        <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id mollis dolor. Duis porttitor quis dui non dignissim.</p>
+          
+       </div>
+        
+        <i class="fa-brands fa-bitcoin"></i>
+        
+      </div>
+      
+    </div>
+
+  </main>
+
+   <!--Footer-->
+  <footer>
+
+    <div class="footer_info">
+
+      <div class="menu_footer">
+        <ul>
+          <h1>Navigation</h1>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+      
+      <div class="socials_footer">
+        <ul>
+          <h1>Socials</h1>
+          <li><a href="">Twitter</a></li>
+          <li><a href="">Youtube</a></li>
+          <li><a href="">Discord</a></li>
+          <li><a href="">Twitch</a></li>
+          <li><a href="">Instagram</a></li>
+        </ul>
+      </div>
+      
+      <div class="contact_footer">
+        <ul>
+          <h1>Contact Us</h1>
+          <li class=""><a href="">Email: abcdef123@gmail.com</a></li>
+          <li class=""><a href="">11-987654321</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <i class="fa-brands fa-d-and-d logo"></i>
+
+    <p>©NeonDragons All Rights Reserved</p>
+    
+  </footer>
+
+  
+  <script src="script.js"></script>
+  <script>
+
+    const observer = new IntersectionObserver(entries => {
+      console.log(entries)
+
+      Array.from(entries).forEach( entry => {
+        if (entry.intersectionRatio >= 0){
+           entry.target.classList.add('init-hidden-off')
+      }
+      } )
+      
+      
+    },{
+      threshold: .5
+    }
+    )
+
+    Array.from(document.querySelectorAll('.init-hidden')).forEach(element =>{
+      observer.observe(element)
+    })
+    
+    
+  </script>
+</body>
+
+</html>

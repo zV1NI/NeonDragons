@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Apex Legends</title>
+  <link rel="stylesheet" href="css_teams/apex.css"  type="text/css" />
+  <script src="https://kit.fontawesome.com/f6cb52faa1.js" crossorigin="anonymous"></script>
+  <style>
+    
+    .init-hidden{
+      opacity: 0;
+      transition: opacity 1s linear;
+    }
+
+    .init-hidden-off{
+      opacity: 1;
+    }
+  
+  </style>
+</head>
+
+<body>
+
+  <!--Nav-->
+  <header id="header">
+
+    <a id="logo" href="/index.html"><i class="fa-brands fa-d-and-d"><span> NeonDragons</span></i></a>
+
+  <nav id="navbar">
+
+    <button id="btn-mobile">
+      <span id="hamburguer"></span>
+    </button>
+    
+    <ul id="menu">
+      
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="partners.html">Partners</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      
+    </ul>
+
+  </nav>
+
+    </header>
+
+  <main>
+  
+    <div class="apex_team">
+      
+      <h1 class="at_h1">Apex Legends</h1>
+      
+      <div class="container init-hidden">
+        
+        <div class="card">
+          <img src="images/fb.jpg">
+          <h1 class="title">Lucas "Sspaz" Reid</h1>
+          <h2>IGL</h2>
+          <div class="socials">
+           <a href=""><i class="fa-brands fa-twitter twitter"></i></a>
+           <a href=""><i class="fa-brands fa-instagram insta"></i></a>
+            <a href=""><i class="fa-brands fa-youtube yt"></i></a>
+            <a href=""><i class="fa-brands fa-twitch twitch"></i></a>
+          </div>      
+      </div>
+        
+        <div class="card">
+          <img src="images/fb.jpg">
+          <h1 class="title">Jose "Hunterr2" Martinez</h1>
+          <h2>Player</h2>
+          <div class="socials">
+            <a href=""><i class="fa-brands fa-twitter twitter"></i></a>
+           <a href=""><i class="fa-brands fa-instagram insta"></i></a>
+            <a href=""><i class="fa-brands fa-youtube yt"></i></a>
+            <a href=""><i class="fa-brands fa-twitch twitch"></i></a>
+          </div>      
+      </div>
+        
+        <div class="card">
+          <img src="images/fb.jpg">
+          <h1 class="title">Frank "Inked" Williams</h1>
+          <h2>Player</h2>
+          <div class="socials">
+            <a href=""><i class="fa-brands fa-twitter twitter"></i></a>
+           <a href=""><i class="fa-brands fa-instagram insta"></i></a>
+            <a href=""><i class="fa-brands fa-youtube yt"></i></a>
+            <a href=""><i class="fa-brands fa-twitch twitch"></i></a>
+            
+          </div>      
+      </div>
+        
+      </div>
+      
+  </main>
+
+   <!--Footer-->
+  <footer>
+
+    <div class="footer_info">
+
+      <div class="menu_footer">
+        <ul>
+          <h1>Navigation</h1>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="teams.html">Teams</a></li>
+          <li><a href="partners.html">Partners</a></li>
+        </ul>
+      </div>
+      
+      <div class="socials_footer">
+        <ul>
+          <h1>Socials</h1>
+          <li><a href="">Twitter</a></li>
+          <li><a href="">Youtube</a></li>
+          <li><a href="">Discord</a></li>
+          <li><a href="">Twitch</a></li>
+          <li><a href="">Instagram</a></li>
+        </ul>
+      </div>
+      
+      <div class="contact_footer">
+        <ul>
+          <h1>Contact Us</h1>
+          <li class=""><a href="">Email: abcdef123@gmail.com</a></li>
+          <li class=""><a href="">11-987654321</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <i class="fa-brands fa-d-and-d logo"></i>
+
+    <p>©NeonDragons All Rights Reserved</p>
+    
+  </footer>
+
+  
+  <script src="/script.js"></script>
+  <script>
+
+    const observer = new IntersectionObserver(entries => {
+      console.log(entries)
+
+      Array.from(entries).forEach( entry => {
+        if (entry.intersectionRatio >= 0){
+           entry.target.classList.add('init-hidden-off')
+      }
+      } )
+      
+      
+    },{
+      threshold: .5
+    }
+    )
+
+    Array.from(document.querySelectorAll('.init-hidden')).forEach(element =>{
+      observer.observe(element)
+    })
+    
+    
+  </script>
+</body>
+
+</html>
